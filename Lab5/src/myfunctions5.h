@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <queue>
 using namespace std;
 
 #ifndef MYFUNCTIONS5_H_
@@ -34,6 +35,12 @@ using namespace std;
 	public:
 		int SIZE;
 		PatientData PatientQueue[SIZE];
+		PatientRegister (); //Constructor
+		~PatientRegister (); //Destructor
+		
+		add (PatientData);
+		remove ();
+	
 	};
 
 #endif /* MYFUNCTIONS5_H_ */
