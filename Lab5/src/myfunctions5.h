@@ -34,12 +34,11 @@ using namespace std;
 
 	public:
 		int SIZE;
-		PatientData PatientQueue[SIZE];
+		//PatientData PatientQueue[SIZE];
+		queue<PatientData> PatientQueue[SIZE];
 		PatientRegister (); //Constructor
 		~PatientRegister (); //Destructor
 		
-		add (PatientData);
-		remove ();
 	
 	};
 
