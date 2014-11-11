@@ -39,6 +39,10 @@ using namespace std;
 		PatientRegister (); //Constructor
 		~PatientRegister (); //Destructor
 		
+		void AddPatient ()
+		{
+	
+		}
 	
 	};
 
