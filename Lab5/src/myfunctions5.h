@@ -41,7 +41,12 @@ using namespace std;
 		
 		void AddPatient ()
 		{
-	
+			
+		}
+		
+		void DisplayaPatient()
+		{
+			
 		}
 	
 	};
