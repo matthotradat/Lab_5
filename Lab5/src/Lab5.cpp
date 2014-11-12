@@ -11,22 +11,37 @@
 #include <queue>
 #include <iomanip>
 using namespace std;
-#include "myfunctions5.h"
+#include "myfuncts.h"
 
 int main(int argc, char* argv[]) {
 
-	int count=0;
+	//int count=0;
+
 	int option;
-	
-	//Call your queue here
-	
+	string line;
+
+	PatientRegister myRegister(); //Call your Register here
+	PatientData myPatient(); //Call your Patient class
+
+	do {
+
 	cout << "[Obsterical Triage Patient Register]" << endl;
+
 	cout << "Please select an option below:" << endl;
-	//list the options/functions of your queuve in a cout here
-	
-	//cin >> option;
-	
+
+	cout << "1. Add Patient\n2. Examine Patient\n3. Display Patients in Queue\n4. Display next Patient\n5. Quit\n" << endl;
+
+	cin >> option;
+
 	//use a switch case to allow user to cycle through the options
+	switch (option)
+	{
+	case 1:
+		if (option == 1){
+			//myRegister.AddPatient(line,myPatient); //error
+		}
+	}
+	} while (option != 5);
 
 	return 0;
 }
