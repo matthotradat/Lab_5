@@ -16,9 +16,12 @@ using namespace std;
 int main(int argc, char* argv[]) {
 
 	//int count=0;
-
+	int ptr*, QueueSize, i;
 	int option;
 	string line;
+	
+	cout << "Enter the maximum size for the patient register: ";
+	ptr = new PatientData [i];
 
 	PatientRegister myRegister(); //Call your Register here
 	PatientData myPatient(); //Call your Patient class
