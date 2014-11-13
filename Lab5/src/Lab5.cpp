@@ -8,43 +8,74 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <sstream>
 #include <queue>
 #include <iomanip>
+#include <cstdlib>
 using namespace std;
 #include "myfuncts.h"
 
-int main(int argc, char* argv[]) {
+int main(int argc, char**argv) {
 
-	//int count=0;
-	int ptr*, QueueSize, i;
-	int option;
-	string line;
-	
-	cout << "Enter the maximum size for the patient register: ";
-	ptr = new PatientData [i];
+    int QueueSize;
+    int option;
+    string line;
 
-	PatientRegister myRegister(); //Call your Register here
-	PatientData myPatient(); //Call your Patient class
+    cout << "Enter the maximum size for the patient register: ";
 
-	do {
+    cin >> QueueSize;
 
-	cout << "[Obsterical Triage Patient Register]" << endl;
+    PatientRegister myRegister; //Call your Register here
+    PatientData myPatient; //Call your Patient class
 
-	cout << "Please select an option below:" << endl;
+    do {
 
-	cout << "1. Add Patient\n2. Examine Patient\n3. Display Patients in Queue\n4. Display next Patient\n5. Quit\n" << endl;
+    cout << "[Obsterical Triage Patient Register]" << endl;
 
-	cin >> option;
+    cout << "Please select an option below:" << endl;
 
-	//use a switch case to allow user to cycle through the options
-	switch (option)
-	{
-	case 1:
-		if (option == 1){
-			//myRegister.AddPatient(line,myPatient); //error
-		}
-	}
-	} while (option != 5);
+    cout << "1. Add Patient\n2. Examine Patient\n3. Display next Patient\n4. Display All Patients\n5. Quit\n" << endl;
 
-	return 0;
+    cin >> option; // 1 to 5
+
+    //use a switch case to allow user to cycle through the options
+    switch (option)
+    {
+    case 1:
+        if (option == 1){
+            myRegister.AddPatient(line,myPatient); //error
+        }
+        break;
+    case 2:
+    	if (option == 2){
+    		myRegister.ExaminePatient(myPatient);
+    	}
+		break;
+    case 3:
+    	if (option == 3){
+        	cout << "[Show First Patient in Queue]" << endl;
+        	cout << "First Name" <<"   "<< "Last Name" <<"   "<< "Health Card #" <<"   "<< "Bed Number" <<"  "<< "Contraction Rate" <<"  "<< "Cervix Dilation" <<"  "<< "Condition" << endl;
+        	cout <<myRegister.PatQueue.front().firstname<<"  "<<myRegister.PatQueue.front().lastname<<"  "<<myRegister.PatQueue.front().healthcard<<"  "<<myRegister.PatQueue.front().bednumber<<"  "<<myRegister.PatQueue.front().contraction<<"  "<<myRegister.PatQueue.front().dilation<<"  "<<endl;
+        	//cout << myRegister.PatQueue.front();
+    	}
+    	break;
+    case 4:
+    	if (option == 4){
+    		myRegister.DisplayPatients(myPatient);
+    	}
+    	break;
+    case 5:
+    	if (option == 5){
+    		cout << "Program Ended" << endl;
+    	}
+    	break;
+    default:
+    	cout << "Invalid Key Entered (1 to 5)" << endl;
+    }
+    } while (option != 5);
+
+
+    return 0;
 }
+
