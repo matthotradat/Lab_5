@@ -16,18 +16,17 @@
 using namespace std;
 #include "myfunctions5.h"
 
-int main(int argc, char**argv) {
+int main(int argc, char** argv) {
 
     int QueueSize;
     int option;
     string line;
+    PatientRegister myRegister, *ptr; //Call your Register here
+    PatientData myPatient; //Call your Patient class
 
     cout << "Enter the maximum size for the patient register: ";
-
     cin >> QueueSize;
-
-    PatientRegister myRegister; //Call your Register here
-    PatientData myPatient; //Call your Patient class
+    ptr = new PatientRegister [QueueSize];
 
     do {
 
