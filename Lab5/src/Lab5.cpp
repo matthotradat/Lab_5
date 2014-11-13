@@ -14,7 +14,7 @@
 #include <iomanip>
 #include <cstdlib>
 using namespace std;
-#include "myfuncts.h"
+#include "myfunctions5.h"
 
 int main(int argc, char**argv) {
 
